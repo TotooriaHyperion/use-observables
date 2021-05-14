@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.base.json",
+  "compilerOptions": {
+    "module": "esnext",
+    "skipDefaultLibCheck": true,
+    "skipLibCheck": true,
+    "rootDir": "..",
+    "paths": {
+      "use-observables": ["../src"]
+    }
+  },
+  "include": ["."]
+}

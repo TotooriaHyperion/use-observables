@@ -1,6 +1,6 @@
 {
   "name": "use-observables",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "directories": {
     "lib": "lib",
@@ -8,15 +8,16 @@
   },
   "files": [
     "lib",
-    "esm"
+    "esm",
+    "types"
   ],
   "main": "lib/index.js",
   "module": "esm/index.js",
-  "typings": "lib/index.d.ts",
+  "typings": "types/index.d.ts",
   "scripts": {
     "test": "npm run build && npx jest",
     "test:watch": "npx jest --watch -o",
-    "build": "rimraf -rf lib esm && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json"
+    "build": "rimraf -rf lib esm types && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json && tsc -p tsconfig.types.json"
   },
   "author": "TotooriaHyperion <shr9192@gmail.com>",
   "license": "MIT",

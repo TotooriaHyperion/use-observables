@@ -3,7 +3,7 @@
 
 import { renderHook } from "@testing-library/react-hooks";
 
-import { useObservables } from "../src";
+import { useObservables } from "use-observables";
 import { BehaviorSubject, combineLatest, from, of, timer } from "rxjs";
 import { delay, mapTo, share } from "rxjs/operators";
 import { sleep, withAct } from "./shared";
@@ -36,6 +36,7 @@ test("useObservables", async () => {
     });
   });
 
+  expect(renderCount).toBe(6);
   expect(values).toEqual([
     [1, undefined, 3, 4], // init
     [1, 2, 3, 4], // timer(100)
