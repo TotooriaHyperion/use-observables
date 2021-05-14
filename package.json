@@ -1,0 +1,56 @@
+{
+  "name": "use-observables",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib",
+    "esm"
+  ],
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "test": "npm run build && npx jest",
+    "test:watch": "npx jest --watch -o",
+    "build": "rimraf -rf lib esm && tsc -p tsconfig.cjs.json && tsc -p tsconfig.esm.json"
+  },
+  "author": "TotooriaHyperion <shr9192@gmail.com>",
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TotooriaHyperion/use-observables.git"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run build && npx jest"
+    }
+  },
+  "dependencies": {
+    "@types/react": "*",
+    "@types/use-subscription": "*",
+    "rxjs": "^6.6.3",
+    "tslib": "^2.2.0",
+    "use-subscription": "*"
+  },
+  "peerDependencies": {
+    "react": "*"
+  },
+  "devDependencies": {
+    "@testing-library/react-hooks": "*",
+    "@types/jest": "*",
+    "commander": "*",
+    "jest": "*",
+    "react": "*",
+    "react-test-renderer": "^17.0.2",
+    "rimraf": "*",
+    "ts-jest": "*",
+    "typescript": "^4.2.4"
+  }
+}
